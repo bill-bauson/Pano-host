@@ -1,27 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Panoramas</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Panoramas</title>
+
 	<style> @-ms-viewport { width: device-width; } </style>
     <style>
-        .button-link {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            border: none;
-            font-family: Arial, sans-serif;
-        }
-        .button-link:hover {
-            background-color: #0056b3;
-        }
+		.thumbnails {
+		  display: flex;
+		  flex-wrap: wrap;
+		  gap: 16px;           /* space between thumbnails */
+		}
+
+		.thumbnail {
+		  text-align: left;
+		  text-decoration: none;
+		  color: inherit;
+		}
+
+		.thumbnail img {
+			width: 300px; /* change this value as needed */
+			max-width: 100% ; /* prevents it from overflowing on small screens */
+			height: auto; /* keeps correct aspect ratio */
+			border-radius: 4px;
+		}
+
+		.thumbnail span {
+		  display: block;
+		  margin-top: 8px;
+		}
     </style>
 </head>
+
 <body>
-		<a href="https://bill-bauson.github.io/Henderson-Settlement-Visitor-Center/" class="button-link">Henderson Settlement Visitor Center</a>
+	<h1>Panoramas</h1>
+	<div class="thumbnails">
+
+	  <a href="https://bill-bauson.github.io/Henderson-Settlement-Visitor-Center/" class="thumbnail" target="_blank" rel="noopener noreferrer">
+		<span>Henderson Settlement Visitor Center</span>
+		<img src="thumbs/HS_visitor_center.jpg" alt="Henderson Settlement Visitor Center">
+	  </a>
+
+	  <a href="https://bill-bauson.github.io/HR-Quebo-Homes/" class="thumbnail" target="_blank" rel="noopener noreferrer">
+		<span>Hope Remembered Quebo Homes</span>
+		<img src="thumbs/HR_Quebo_Homes.jpg" alt="Hope Remembered Quebo Homes">
+	  </a>
+
+	  <a href="https://bill-bauson.github.io/HR-Water-Tower/" class="thumbnail" target="_blank" rel="noopener noreferrer">
+		<span>Hope Remembered Project Land Water Tower</span>
+		<img src="thumbs/HR_Water_Tower.jpg" alt="Hope Remembered Project Land Water Tower">
+	  </a>
+
+	</div>
 </body>
 </html>
